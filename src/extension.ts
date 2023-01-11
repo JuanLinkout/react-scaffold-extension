@@ -18,7 +18,6 @@ export async function main(uri: Uri) {
     return window.showErrorMessage("The name must not be empty")
   }
 
-  componentName = `${componentName}`
   let targetDirectory = ""
   try {
     targetDirectory = await getTargetDirectory(uri)
