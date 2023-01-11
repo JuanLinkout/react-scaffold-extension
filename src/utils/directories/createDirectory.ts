@@ -1,7 +1,7 @@
 import mkdirp = require("mkdirp")
 
-export function createDirectory(targetDirectory: string): Promise<void> {
-  return new Promise((resolve, reject) => {
-    mkdirp(targetDirectory)
-  })
+export async function createDirectory(
+  targetDirectory: string
+): Promise<string | undefined> {
+  return await mkdirp(targetDirectory)
 }
