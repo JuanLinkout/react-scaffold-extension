@@ -16,10 +16,19 @@
   "contributes": {
     "commands": [
       {
-        "command": "react-scaffold.helloWorld",
-        "title": "Hello World"
+        "command": "extension.new-generic-component",
+        "title": "React: Component Scaffold"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.new-generic-component",
+          "group": "react-scaffold-group@1",
+          "when": "explorerResourceIsFolder"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",
